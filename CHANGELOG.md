@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.0] - 2025-10-01
+
+### 🚀 Features
+
+- Did swagger
+
 ## [1.1.0] - 2025-10-01
 
 ### 🚀 Features
