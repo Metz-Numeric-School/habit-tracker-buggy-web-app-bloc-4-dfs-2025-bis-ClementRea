@@ -2,7 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
-## [0.2.0] - 2025-10-01
+## [1.1.0] - 2025-10-01
+
+### 🚀 Features
+
+- Connect db and make deploy documentation
+
+## [1.0.1] - 2025-10-01
 
 ### 🚀 Features
 
