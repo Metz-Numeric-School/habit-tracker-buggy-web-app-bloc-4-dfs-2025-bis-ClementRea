@@ -1,6 +1,8 @@
 # My Habits Tracker (A Buggy Web Application)
 
-# Lancer aapanel
+# Route swagger
+
+la route pour de connecter à swagger est http://rea-dfsgr2.local/swagger-ui/#
 
 # Présentation du projet
 

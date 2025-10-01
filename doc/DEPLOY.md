@@ -54,3 +54,8 @@ URL=https://www.aapanel.com/script/install_7.0_en.sh && if [ -f /usr/bin/curl ];
 3. je le rend exécutable chmod +x deploy.sh
 
 4. j'ai juste à lancer la commande ./deploy.sh {tag_number} pour lancer le déploiement
+
+# Route de l'application
+
+la route pour de connecter à l'application est http://rea-dfsgr2.local
+la route pour de connecter à swagger est http://rea-dfsgr2.local/swagger-ui/#
