@@ -21,12 +21,11 @@ class MySqlConnector {
 
     private function connect() {
         $host = $_ENV['DB_HOST'];
-        $port = $_ENV['DB_PORT'];
         $dbname = $_ENV['DB_DATABASE'];
         $username = $_ENV['DB_USERNAME'];
         $password = $_ENV['DB_PASSWORD'];
 
-        $dsn = "mysql:host=$host;port=$port;dbname=$dbname;charset=utf8mb4";
+        $dsn = "mysql:host=$host;dbname=$dbname;charset=utf8mb4";
 
         try {
             $this->pdo = new \PDO($dsn, $username, $password, [
