@@ -4,9 +4,25 @@ namespace App\Controller\Member;
 use App\Repository\HabitRepository;
 use App\Repository\HabitLogRepository;
 use Mns\Buggy\Core\AbstractController;
+use OpenApi\Attributes as OA;
 
+#[OA\Info(title: "API du projet DFS Training", version: "1.0.0")]
 class HabitsController extends AbstractController
 {
+    #[OA\Get(
+        path: "/habits",
+        summary: "Get the list of habits for the authenticated user.",
+        responses: [
+            new OA\Response(
+                response: 200,
+                description: "List of habits",
+                content: new OA\MediaType(
+                    mediaType: "application/json",
+                    schema: new OA\Schema(type: "array", items: new OA\Schema(ref: "#/components/schemas/Habit"))
+                )
+            )
+        ]
+    )]
     private HabitRepository $habitRepository;
     private HabitLogRepository $habitLogRepository;
 

@@ -3,10 +3,26 @@ namespace App\Controller\Admin;
 
 use App\Repository\UserRepository;
 use Mns\Buggy\Core\AbstractController;
+use OpenApi\Attributes as OA;
 
+
+#[OA\Info(title: "API du projet DFS Training", version: "1.0.0")]
 class UserController extends AbstractController
 {
-
+    #[OA\Get(
+    path: "/user",
+    summary: "Create a new user.",
+    responses: [
+      new OA\Response(
+        response: 200,
+        description: "List of users",
+        content: new OA\MediaType(
+          mediaType: "text/html",
+          schema: new OA\Schema(type: "string")
+        )
+      )
+    ]
+  )]
     private UserRepository $userRepository;
 
     public function __construct()

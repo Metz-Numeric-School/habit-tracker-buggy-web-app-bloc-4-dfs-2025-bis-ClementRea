@@ -38,8 +38,51 @@ final class Kernel
 
     public function run()
     {
+        $requestMethod = $_SERVER['REQUEST_METHOD'];
+        $requestPath = $_SERVER['REQUEST_URI'];
+
         $this->handle();
+        if ($this->serveStaticFile($requestPath)) {
+          return;
+        }
     }
 
+  protected function serveStaticFile($path)
+  {
+    $allowedPaths = [
+      '/swagger-ui/',
+      '/api-docs/'
+    ];
+
+    foreach ($allowedPaths as $allowedPath) {
+      if (strpos($path, $allowedPath) === 0) {
+        $filePath = __DIR__ . '/../public' . $path;
+          if (is_dir($filePath)) {
+          $filePath .= '/index.html';
+        }
+
+        if (file_exists($filePath)) {
+          $extension = pathinfo($filePath, PATHINFO_EXTENSION);
+          $mimeTypes = [
+            'html' => 'text/html',
+            'css' => 'text/css',
+            'js' => 'application/javascript',
+            'json' => 'application/json',
+            'png' => 'image/png',
+            'ico' => 'image/x-icon',
+            'map' => 'application/json'
+          ];
+
+          if (isset($mimeTypes[$extension])) {
+            header('Content-Type: ' . $mimeTypes[$extension]);
+          }
+
+          readfile($filePath);
+          return true;
+        }
+      }
+    }
+    return false;
+  }
 }
 

@@ -3,10 +3,25 @@ namespace App\Controller;
 
 use App\Repository\UserRepository;
 use Mns\Buggy\Core\AbstractController;
+use OpenApi\Attributes as OA;
 
+#[OA\Info(title: "API du projet DFS Training", version: "1.0.0")]
 class RegisterController extends AbstractController
 {
-
+  #[OA\Post(
+    path: "/register",
+    summary: "Registers a new user.",
+    responses: [
+      new OA\Response(
+        response: 200,
+        description: "Registration page",
+        content: new OA\MediaType(
+          mediaType: "text/html",
+          schema: new OA\Schema(type: "string")
+        )
+      )
+    ]
+  )]
     private UserRepository $userRepository;
 
     public function __construct()

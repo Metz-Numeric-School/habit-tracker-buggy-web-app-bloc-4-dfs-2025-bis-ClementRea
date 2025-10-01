@@ -1,5 +1,7 @@
 # My Habits Tracker (A Buggy Web Application)
 
+# Lancer aapanel
+
 # Présentation du projet
 
 MyHabitTracker est une application web conçu sur une architecture MVC et qui s'inspire de l'arborsence et du fonctionnement du framework Symfony.
@@ -15,14 +17,14 @@ Celle-ci est destiné à être utilisée à des fins pédgogique uniquement et d
 
 Les objectifs sont les suivants :
 
-* Prendre connaissance du code existant
-* Paramétrer votre environnement dans le fichier .env ou .env.local
-* 1ère partie (3h)
-* * Préparer le déploiement de l'application (sur votre machine Debian) en rédigeant votre procédure dans le fichier `doc/DEPLOY.md`
-  * Répondez aux questions figurant dans le fichier `doc/QUESTIONS.md`
-* 2ème partie (2h)
-  * Corriger toutes les failles de sécurité/bugs (voir `doc/TODO.md`) et déployez un correctif (toutes les failles ne sont pas répértoriées)
-  * Pensez à mettre à jour le fichier `CHANGELOG.md`
+- Prendre connaissance du code existant
+- Paramétrer votre environnement dans le fichier .env ou .env.local
+- 1ère partie (3h)
+- - Préparer le déploiement de l'application (sur votre machine Debian) en rédigeant votre procédure dans le fichier `doc/DEPLOY.md`
+  - Répondez aux questions figurant dans le fichier `doc/QUESTIONS.md`
+- 2ème partie (2h)
+  - Corriger toutes les failles de sécurité/bugs (voir `doc/TODO.md`) et déployez un correctif (toutes les failles ne sont pas répértoriées)
+  - Pensez à mettre à jour le fichier `CHANGELOG.md`
 
 ## Lancement du projet
 
@@ -40,7 +42,7 @@ Pour lancer le projet, vous devez impérativement passer par la commande : `php 
 
 Pour créer la base de données vous pouvez lancer la commande : `php bin/create-database `
 
-Un compte admin et utilisateurs seront également créés *(vous trouverez les informations dans le script database.sql)*
+Un compte admin et utilisateurs seront également créés _(vous trouverez les informations dans le script database.sql)_
 
 Ensuite, vous pouvez alimenter la base de données avec des données démo en lançant la commande : `php bin/load-demo-data`
 

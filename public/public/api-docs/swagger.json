@@ -1,0 +1,82 @@
+{
+  "openapi": "3.0.0",
+  "paths": {
+    "/register": {
+      "post": {
+        "summary": "Registers a new user.",
+        "produces": [
+          "application/json"
+        ],
+    "responses": {
+      "200": {
+        "description": "Registration successful",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "message": {
+                  "type": "string",
+                  "example": "User registered successfully"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+},
+"/user": {
+      "post": {
+        "summary": "Create a new user.",
+        "produces": [
+          "application/json"
+        ],
+    "responses": {
+      "200": {
+        "description": "User created successfully",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "message": {
+                  "type": "string",
+                  "example": "User registered successfully"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+},
+"/habits": {
+      "get": {
+        "summary": "Get the list of habits for the authenticated user.",
+        "produces": [
+          "application/json"
+        ],
+    "responses": {
+      "200": {
+        "description": "List of habits",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "message": {
+                  "type": "string",
+                  "example": "List of habits"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+}}
